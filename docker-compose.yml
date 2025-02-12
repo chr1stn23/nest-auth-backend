@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    container_name: mean-db
+    image: mongo:8.0.5-rc1-noble
+    volumes:
+      - ./mongo:/data/db
+    ports:
+      - 27017:27017
+    restart: always
